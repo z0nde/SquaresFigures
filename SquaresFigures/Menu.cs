@@ -4,10 +4,7 @@
     {
         private List<ContentMenu> ListMenu { get; set; } = new();
 
-        public Menu()
-        {
-            
-        }
+        public Menu() { }
 
         private void Expansion(ICalculation calc)
         {

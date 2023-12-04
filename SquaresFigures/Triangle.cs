@@ -70,7 +70,20 @@
             if (_Cont == 1)
                 return (1.0/2.0 * _X) * _H;
             else
+            {
+                RightAngled(_A, _B, _C);
                 return Math.Sqrt(_P * (_P - _A) * (_P - _B) * (_P - _C));
+            }
+        }
+        
+        public void RightAngled(double a, double b, double c)
+        {
+            if ((Math.Pow(_A, 2) + Math.Pow(_B, 2) == Math.Pow(_C, 2)) ||
+                (Math.Pow(_A, 2) + Math.Pow(_C, 2) == Math.Pow(_B, 2)) ||
+                (Math.Pow(_B, 2) + Math.Pow(_C, 2) == Math.Pow(_A, 2)))
+                Console.WriteLine("Треугольник прямоугольный");
+            else
+                Console.WriteLine("Треугольник не прямоугольный");
         }
     }
 }
